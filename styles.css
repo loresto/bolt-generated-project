@@ -1,0 +1,618 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* Стили для верхней навигации */
+.top-nav {
+  background: #2c3e50;
+  padding: 1rem;
+  text-align: center;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+
+.top-nav a:hover {
+  color: #3498db;
+}
+
+/* Стили для шапки */
+.header-content {
+  position: relative;
+  background: #f8f9fa;
+}
+
+.header-content-inner {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.logo-section {
+  flex: 1;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.slogan {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.contact-section {
+  text-align: right;
+}
+
+.contact-info {
+  margin-bottom: 1rem;
+}
+
+.address, .phone {
+  color: #666;
+  margin: 0.25rem 0;
+}
+
+.callback-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.callback-btn:hover {
+  background: #2980b9;
+}
+
+/* Стили для слайдшоу */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.slideshow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1.5rem;
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+
+.slideshow-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* Стили для секции преимуществ */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+  background: white;
+  text-align: center;
+}
+
+.benefit-item {
+  padding: 1.5rem;
+}
+
+.benefit-item i {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.benefit-item h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+  color: #666;
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  margin: 15% auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.submit-btn:hover {
+  background: #2980b9;
+}
+
+/* Основные стили */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin: 3rem 0;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+/* Стили для секции "Привет мир!" */
+.greeting {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.greeting h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Стили для сетки категорий */
+.categories {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.category-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+}
+
+.category-card i {
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.category-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.category-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.category-card ul li {
+  padding: 0.5rem 0;
+  color: #666;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.category-card ul li::before {
+  content: '•';
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+.category-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+
+.category-btn:hover {
+  background: #2980b9;
+}
+
+/* Стили для секции о компании */
+.about {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-text {
+  max-width: 800px;
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.feature i {
+  color: #3498db;
+  font-size: 1.5rem;
+}
+
+.feature span {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Стили для CTA секции */
+.cta {
+  padding: 4rem 0;
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background-color: white;
+  color: #3498db;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для секции поставщиков */
+.suppliers {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.suppliers-slider {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.suppliers-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.supplier-item {
+  flex: 0 0 200px;
+ 150px;
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.supplier-item:hover {
+  transform: translateY(-5px);
+}
+
+.supplier-item img {
+  max-width: 150px;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.supplier-item img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 7 - 4rem * 7));
+  }
+}
+
+/* Стили для секции с картой */
+.map-section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .supplier-item {
+    flex: 0 0 150px;
+    margin: 0 1rem;
+  }
+
+  .supplier-item img {
+    max-width: 120px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-150px * 7 - 2rem * 7));
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .category-card {
+    padding: 1.5rem;
+  }
+
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .supplier-item {
+    flex: 0 0 120px;
+    margin: 0 0.5rem;
+  }
+
+  .supplier-item img {
+    max-width: 100px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-120px * 7 - 1rem * 7));
+    }
+  }
+
+  .map-container {
+    height: 300px;
+  }
+}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Автозапчасти</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <a href="/" aria-current="page">Главная</a>
+        <a href="/about.html">О компании</a>
+        <a href="/contacts.html">Контакты</a>
+      </nav>
+      <div class="header-content">
+        <div class="slideshow-container">
+          <div class="slideshow">
+            <div class="slide fade">
+              <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&h=400" alt="Спортивный автомобиль">
+            </div>
+            <div class="slide fade">
+              <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&h=400" alt="Двигатель автомобиля">
+            </div>
+            <div class="slide fade">
+              <img src="https://images.unsplash.com/photo-1537984822441-cff330075342?auto=format&fit=crop&w=1200&h=400" alt="Автозапчасти">
+            </div>
+            <div class="slide fade">
+              <img src="https://images.unsplash.com/photo-1503376780358-e71b35a485bc?auto=format&fit=crop&w=1200&h=400" alt="Классический автомобиль">
+            </div>
+            <div class="slide fade">
+              <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1200&h=400" alt="Тормозная система">
+            </div>
+            <div class="slide fade">
+              <img src="https://images.unsplash.com/photo-1562519819016930ada31c?auto=format&fit=crop&w=1200&h=400" alt="Колесные диски">
+            </div>
+            <div class="slide fade">
+              <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&h=400" alt="Современный автомобиль">
+            </div>
+            <div class="slide fade">
+              <img src="https://images.unsplash.com/photo-1531891570158-e323be2ae537?auto=format&fit=crop&w=1200&h=400" alt="Масляный фильтр">
+            </div>
+            <div class="slide fade">
+              <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1200&h=400" alt="Аккумулятор">
+            </div>
+            <div class="slide fade">
+              <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1200&h=400" alt="Электроника автомобиля">
+            </div>
+          </div>
+          <button class="slideshow-btn prev" id="prevSlide">❮</button>
+          <button class="slideshow-btn next" id="nextSlide">❯</button>
+          <div class="slideshow-dots"></div>
+          <div class="overlay"></div>
+        </div>
+        
+        <div class="header-content-inner">
+          <div class="logo-section">
+            <h1 class="logo">АвтоЗапчасти - АвтоСфера</h1>
+            <p class="slogan">Качественные запчасти для вашего автомобиля</p>
+          </div>
+          <div class="contact-section">
+            <div class="contact-info">
+              <p class="address">Г.Сысерть, ул. Тимирязева 41</p>
+              <p class="phone">+7 (922) 139-69-09</p>
+            </div>
+            <button class="callback-btn" id="openModal">Заказать звонок</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+
+      <section class="benefits">
+        <div class="benefit-item">
+          <i class="fas fa-user-tie"></i>
+          <h3>Индивидуальный подход</h3>
+          <p>К каждому клиенту</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-truck"></i>
+          <h3>Быстрая доставка</h3>
+          <p>В любую точку города</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-award"></i>
+          <h3>Качественно</h3>
+          <p>Гарантия на все запчасти</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-piggy-bank"></i>
+          <h3>Недорого</h3>
+          <p>Доступные цены</p>
+        </div>
+      </section>
+
+      <section class="categories">
+        <div class="container">
+          <h2 class="section-title">Наша продукция</h2>
+          <div class="categories-grid">
+            <div class="category-card">
+              <i class="fas fa-heart fa-3x"></i>
+              <h3>Агрегаты</h3>
+              <ul>
+                <li>Двигатели в сборе</li>
+                <li>Коробки передач</li>
+                <li>Раздаточные коробки</li>
+                <li>Мосты в сборе</li>
+              </ul>
+              <button class="category-btn" onclick="document.getElementById('openModal').click()">Узнать цену</button>
+            </div>
+
+            <div class="category-card">
+              <i class="fas fa-cogs fa-3x"></i>
+              <h3>Запчасти</h3>
+              <ul>
+                <li>Детали двигателя</li>
+                <li>Элементы трансмиссии</li>
+                <li>Тормозная система</li>
+                <li>Ходовая часть</li>
+              </ul>
+              <button class="category-btn" onclick="document.getElementById('openModal').click()">Узнать цену</button>
+            </div>
+
+            <div class="category-card">
+              <i class="fas fa-car-side fa-3x"></i>
+              <h3>Кузовные детали</h3>
+              <ul>
+                <li>Капоты и крылья</li>
+                <li>Бамперы</li>
+                <li>Двери</li>
+                <li>Крышки багажника</li>
+              </ul>
+              <button class="category-btn" onclick="document.getElementById('openModal').click()">Узнать цену</button>
+            </div>
+
+            <div class="category-card">
+              <i class="fas fa-car fa-3x"></i>
+              <h3>Остекление</h3>
+              <ul>
+                <li>Лобовые стекла</li>
+                <li>Боковые стекла</li>
+                <li>Задние стекла</li>
+                <li>Стекла форточек</li>
+              </ul>
+              <button class="category-btn" onclick="document.getElementById('openModal').click()">Узнать цену</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <h2 class="section-title">О нашей компании</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>Мы специализируемся на поставке качественных автозапчастей для легковых и грузовых автомобилей всех марок. Наша компания работает напрямую с производителями и официальными дистрибьюторами, что позволяет предлагать нашим клиентам лучшие цены.</p>
+              <div class="features-list">
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Гарантия на все запчасти</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-certificate"></i>
+                  <span>Только оригинальные детали</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-handshake"></i>
+                  <span>Профессиональная консультация</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <h2>Нужна помощь в подборе запчастей?</h2>
+          <p>Наши специалисты помогут подобрать необходимые детали по VIN-коду вашего автомобиля</p>
+          <button class="cta-button" onclick="document.getElementById('openModal').click()">Получить консультацию</button>
+        </div>
+      </section>
+
+      <section class="suppliers">
+        <div class="container">
+          <h2 class="section-title">Производители запчастей</h2>
+          <div class="suppliers-slider">
+            <div class="suppliers-track">
+              <div class="supplier-item">
+                <img src="https://detali100.ru/system/global_price_replacements_logo/163/LEMFORDER_original.jpg?1694709847" alt="Lemforder">
+              </div>
+              <div class="supplier-item">
+                <img src="https://back.ajusa.es/archivos/pressroom/logotipo/2020/05/14/Logo_Ajusa_RGB.png" alt="Ajusa">
+              </div>
+              <div class="supplier-item">
+                <img src="https://avatars.mds.yandex.net/i?id=52be4cdfcea62fbf35d80478da64bd3_l-5345102-images-thumbs&n=13" alt="CTR">
+              </div>
+              <div class="supplier-item">
+                <img src="https://www.icover.ru/upload/iblock/b9f/b9f6bdf03d399594a204eaa13cadac42.png" alt="Bosch">
+              </div>
+              <div class="supplier-item">
+                <img src="https://kordail.ru/upload/iblock/3a6/5e97a4sfqg0hbtj8zaw4wpkv5rb7j041.webp" alt="Continental">
+              </div>
+              <div class="supplier-item">
+                <img src="https://a.d-cd.net/e4b5162s-960.jpg" alt="Denso">
+              </div>
+              <div class="supplier-item">
+                <img src="https://www.spbparts.ru/zp/images/uploads/61f/61ff22ded746218561e1baa1a3d3797.png" alt="Delphi">
+              </div>
+              <div class="supplier-item">
+                <img src="https://data.mcmshop.ru/storage/img/mid/0e3a5cb7e45fd4bb9f61fa6a109f91dd.jpg" alt="FAG">
+              </div>
+              <div class="supplier-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Freudenberg_logo.svg/1200px-Freudenberg_logo.svg.png" alt="Freudenberg">
+              </div>
+              <div class="supplier-item">
+                <img src="https://mrgarage.ru/system/global_price_replacements_logo/2421/HELLA_original.jpg?1448380662" alt="Hella">
+              </div>
+              <div class="supplier-item">
+                <img src="https://filter-air.ru/upload/iblock/f33/93qznk8wi2t6wkjyuc9pccgw8gaf4frw.png" alt="Mahle">
+              </div>
+              <div class="supplier-item">
+                <img src="https://avatars.mds.yandex.net/i?id=6c827de6e2fd25a3509f5cba70e4fe7b_l-13-images-thumbs&n=13" alt="NGK">
+              </div>
+              <div class="supplier-item">
+                <img src="https://euromehanika.ru/upload/iblock/81e/81e00b7a6e19f419f43c13f7775a347.png" alt="Schaeffler">
+              </div>
+              <div class="supplier-item">
+                <img src="https://a.d-cd.net/e4b5162s-960.jpg" alt="ZF">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section">
+        <div class="container">
+          <h2 class="section-title">Как нас найти</h2>
+					<h1 class="about-text">Мы находимся по адресу г. Сысерть, ул. Тимирязева 41</h1>
+           <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8673375543584!2d60.81279687677667!3d56.50254997346931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c4456f54b7c8b7%3A0x8b4e3ed5e2b656eb!2z0YPQuy4g0KLQuNC80LjRgNGP0LfQtdCy0LAsIDQxLCDQodGL0YHQtdGA0YLRjCwg0KHQstC10YDQtNC70L7QstGB0LrQsNGPINC-0LHQuy4sIDYyNDAyMg!5e0!3m2!1sru!2sru!4v1690000000000!5m2!1sru!2sru" 
+              width="100%" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Заказать звонок</h2>
+        <form id="callbackForm">
+          <div class="form-group">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" required maxlength="10">
+          </div>
+          <div class="form-group">
+            <label for="vin">VIN-код:</label>
+            <input type="text" id="vin" name="vin" required>
+          </div>
+          <div class="form-group">
+            <label for="part">Номер/артикул или требуемая запчасть:</label>
+            <textarea id="part" name="part" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
